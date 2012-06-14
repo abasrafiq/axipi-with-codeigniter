@@ -258,8 +258,9 @@ class axipi_library {
 				}
 
 				$debug .= '<queries count="'.count($this->CI->db->queries).'">';
-				foreach($this->CI->db->queries as $query) {
-					$debug .= '<query>'.str_replace(array('<', '>'), array('&lt;', '&gt;'), $query).'</query>';
+				foreach($this->CI->db->queries as $k => $query) {
+					$query_time = number_format($this->CI->db->query_times[$k], 20, '.', '');
+					$debug .= '<query time="'.$query_time.'"><![CDATA['.$query.']]></query>';
 				}
 				$debug .= '</queries>';
 				$debug .= '</debug>';
@@ -311,8 +312,9 @@ class axipi_library {
 
 				$debug .= '<h2>queries ('.count($this->CI->db->queries).')</h2>';
 				$debug .= '<ul>';
-				foreach($this->CI->db->queries as $query) {
-					$debug .= '<li>'.$query.'</li>';
+				foreach($this->CI->db->queries as $k => $query) {
+					$query_time = number_format($this->CI->db->query_times[$k], 20, '.', '');
+					$debug .= '<li>'.$query.'<br>'.$query_time.'</li>';
 				}
 				$debug .= '</ul>';
 
