@@ -21,7 +21,6 @@
 
 <div class="column1">
 <p><span class="label"><?php echo $this->lang->line('hst_code'); ?></span><?php echo $hst->hst_code; ?></p>
-<p><span class="label"><?php echo $this->lang->line('hst_url'); ?></span><?php echo $hst->hst_url; ?></p>
 <p><span class="label"><?php echo $this->lang->line('hst_environment'); ?></span><?php echo $hst->hst_environment; ?></p>
 <p><span class="label"><?php echo $this->lang->line('lay_code'); ?></span><?php echo $hst->lay_code; ?></p>
 </div>

@@ -165,8 +165,6 @@ CREATE TABLE IF NOT EXISTS `hst` (
   `hst_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lay_id` int(10) unsigned DEFAULT NULL,
   `hst_code` varchar(100) NOT NULL,
-  `hst_url` varchar(255) NOT NULL,
-  `hst_rewrite` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `hst_gzhandler` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `hst_debug` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `hst_environment` varchar(100) DEFAULT NULL,

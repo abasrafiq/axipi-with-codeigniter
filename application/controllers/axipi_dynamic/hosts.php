@@ -17,7 +17,6 @@ class hosts extends CI_Controller {
 		$columns = array();
 		$columns[] = 'hst.hst_id';
 		$columns[] = 'hst.hst_code';
-		$columns[] = 'hst.hst_url';
 		$columns[] = 'hst.hst_environment';
 		$columns[] = 'hst.hst_gzhandler';
 		$columns[] = 'hst.hst_debug';
@@ -57,7 +56,6 @@ class hosts extends CI_Controller {
 		$data['translations'] = $this->hosts_model->get_translations(0);
 
 		$this->form_validation->set_rules('hst_code', 'lang:hst_code', 'required|max_length[100]|callback_rule_hst_code');
-		$this->form_validation->set_rules('hst_url', 'lang:hst_url', 'required|max_length[255]');
 		$this->form_validation->set_rules('hst_environment', 'lang:hst_environment', 'max_length[100]');
 		$this->form_validation->set_rules('lay_id', 'lang:lay_id', 'numeric');
 		$this->form_validation->set_rules('hst_gzhandler', 'lang:hst_gzhandler');
@@ -70,7 +68,6 @@ class hosts extends CI_Controller {
 			$this->zones['content'] = $this->load->view('axipi_dynamic/hosts/hosts_create', $data, true);
 		} else {
 			$this->db->set('hst_code', $this->input->post('hst_code'));
-			$this->db->set('hst_url', $this->input->post('hst_url'));
 			$this->db->set('hst_environment', $this->input->post('hst_environment'));
 			$this->db->set('lay_id', $this->input->post('lay_id'));
 			$this->db->set('hst_gzhandler', checkbox2database($this->input->post('hst_gzhandler')));
@@ -113,7 +110,6 @@ class hosts extends CI_Controller {
 			$data['translations'] = $this->hosts_model->get_translations($hst_id);
 
 			$this->form_validation->set_rules('hst_code', 'lang:hst_code', 'required|max_length[100]|callback_rule_hst_code['.$data['hst']->hst_code.']');
-			$this->form_validation->set_rules('hst_url', 'lang:hst_url', 'required|max_length[255]');
 			$this->form_validation->set_rules('hst_environment', 'lang:hst_environment', 'max_length[100]');
 			$this->form_validation->set_rules('lay_id', 'lang:lay_id', 'numeric');
 			$this->form_validation->set_rules('hst_gzhandler', 'lang:hst_gzhandler');
@@ -126,7 +122,6 @@ class hosts extends CI_Controller {
 				$this->zones['content'] = $this->load->view('axipi_dynamic/hosts/hosts_update', $data, true);
 			} else {
 				$this->db->set('hst_code', $this->input->post('hst_code'));
-				$this->db->set('hst_url', $this->input->post('hst_url'));
 				$this->db->set('hst_environment', $this->input->post('hst_environment'));
 				$this->db->set('lay_id', $this->input->post('lay_id'));
 				$this->db->set('hst_gzhandler', checkbox2database($this->input->post('hst_gzhandler')));

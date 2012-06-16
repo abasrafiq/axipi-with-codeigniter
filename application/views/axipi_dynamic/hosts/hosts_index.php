@@ -34,11 +34,10 @@
 <tr>
 <?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[0], $this->lang->line('hst_id')); ?>
 <?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[1], $this->lang->line('hst_code')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[2], $this->lang->line('hst_url')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[3], $this->lang->line('hst_environment')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[4], $this->lang->line('hst_gzhandler')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[5], $this->lang->line('hst_debug')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[6], $this->lang->line('lay_code')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[2], $this->lang->line('hst_environment')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[3], $this->lang->line('hst_gzhandler')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[4], $this->lang->line('hst_debug')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'hosts', $columns[5], $this->lang->line('lay_code')); ?>
 <th>&nbsp;</th>
 </tr>
 </thead>
@@ -48,7 +47,6 @@
 <tr>
 <td><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $result->hst_id;?>"><?php echo $result->hst_id;?></a></td>
 <td><?php echo $result->hst_code; ?></td>
-<td><?php echo $result->hst_url; ?></td>
 <td><?php echo $result->hst_environment; ?></td>
 <td><?php echo $this->lang->line('reply_'.$result->hst_gzhandler); ?></td>
 <td><?php echo $this->lang->line('reply_'.$result->hst_debug); ?></td>
