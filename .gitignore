@@ -2,3 +2,4 @@
 .DS_Store
 application/logs/log-*
 application/cache/axipi+dynamic
+application/cache/default+index

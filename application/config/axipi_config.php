@@ -5,4 +5,4 @@ $config['404_cmp_code'] = 'axipi_core/error404';
 $config['date_timezone'] = 'Etc/UCT';
 $config['default_itm_code'] = 'axipi';
 $config['default_usr_timezone'] = 1;
-$config['hst_rewrite'] = FALSE;
+$config['hst_rewrite'] = TRUE;
