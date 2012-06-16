@@ -10,8 +10,8 @@ class database extends CI_Controller {
 		$output = '<div class="box1">';
 		$output .= '<h1>Tables ('.$query->num_rows().')</h1>';
 		$output .= '<ul>';
-		$output .= '<li><a href="'.base_url().$this->itm->itm_code.'/_translation">Translation</a></li>';
-		$output .= '<li><a href="'.base_url().$this->itm->itm_code.'/_optimize">Optimize</a></li>';
+		$output .= '<li><a href="'.ci_url().$this->itm->itm_code.'/_translation">Translation</a></li>';
+		$output .= '<li><a href="'.ci_url().$this->itm->itm_code.'/_optimize">Optimize</a></li>';
 		$output .= '</ul>';
 		$output .= '<div class="display">';
 		$output .= '<table>';
@@ -45,7 +45,7 @@ class database extends CI_Controller {
 				$rows = $row->Rows;
 			//}
 			$output .= '<tr>';
-			$output .= '<td><a href="'.base_url().'axipi/core/database/_show/'.$row->Name.'">'.$row->Name.'</a></td>';
+			$output .= '<td><a href="'.ci_url().'axipi/core/database/_show/'.$row->Name.'">'.$row->Name.'</a></td>';
 			$output .= '<td>'.$row->Comment.'</td>';
 			$output .= '<td>'.$engine.'</td>';
 			$output .= '<td>'.$row->Collation.'</td>';
@@ -57,7 +57,7 @@ class database extends CI_Controller {
 			$output .= '<td>'.$row->Update_time.'</td>';
 			$output .= '<th>';
 			//$output .= '<a href="index.php?p='.$this->get['p'].'&amp;a=convert-utf8-table&amp;table='.$row->Name.'">Convert to UTF-8</a>';
-			$output .= '<a href="'.base_url().'axipi/core/database/_show/'.$row->Name.'">Show</a>';
+			$output .= '<a href="'.ci_url().'axipi/core/database/_show/'.$row->Name.'">Show</a>';
 			$output .= '</th>';
 			$output .= '</tr>';
 		}
@@ -77,7 +77,7 @@ class database extends CI_Controller {
 			$output .= '<div class="box1">
 			<h1>'.$table.' / '.$query_status->row()->Comment.'</h1>
 			<ul>';
-			$output .= '<li><a href="'.base_url().$this->itm->itm_code.'">Index</a></li>';
+			$output .= '<li><a href="'.ci_url().$this->itm->itm_code.'">Index</a></li>';
 			$output .= '</ul>';
 			$output .= '<div class="display">';
 			$output .= '<table>
@@ -117,7 +117,7 @@ class database extends CI_Controller {
 		$output = '<div class="box1">';
 		$output .= '<h1>Translation</h1>';
 		$output .= '<ul>';
-		$output .= '<li><a href="'.base_url().$this->itm->itm_code.'">Index</a></li>';
+		$output .= '<li><a href="'.ci_url().$this->itm->itm_code.'">Index</a></li>';
 		$output .= '</ul>';
 		$output .= '<div class="display">';
 		$query = $this->db->query('SHOW TABLE STATUS');

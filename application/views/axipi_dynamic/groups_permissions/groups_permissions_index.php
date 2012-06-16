@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('permissions'); ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('permissions'); ?></a></li>
 <li><?php echo $this->lang->line('index'); ?></li>
 </ul>
 </div>
@@ -13,7 +13,7 @@
 
 <h2><?php echo $this->lang->line('index'); ?></h2>
 
-<?php echo form_open(base_url().$this->itm->itm_code); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 <div class="filters">
 <div><?php echo form_label($this->lang->line('per_code'), 'groups_permissions_per_code'); ?><?php echo form_input('groups_permissions_per_code', set_value('groups_permissions_per_code', $this->session->userdata('groups_permissions_per_code')), 'id="groups_permissions_per_code" class="inputtext"'); ?></div>
 <div><input class="inputsubmit" type="submit" name="submit" id="submit" value="<?php echo $this->lang->line('validate'); ?>"></div>
@@ -26,13 +26,13 @@
 <?php echo $pagination; ?>
 </div>
 
-<?php echo form_open(base_url().$this->itm->itm_code); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 
 <table>
 <thead>
 <tr>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_permissions', $columns[0], $this->lang->line('per_id')); ?>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_permissions', $columns[1], $this->lang->line('per_code')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_permissions', $columns[0], $this->lang->line('per_id')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_permissions', $columns[1], $this->lang->line('per_code')); ?>
 <?php foreach($groups as $group) { ?>
 <th><?php echo $group->grp_trl_title; ?></th>
 <?php } ?>
@@ -42,7 +42,7 @@
 
 <?php foreach($results as $result) { ?>
 <tr>
-<td><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_read/?per_id=<?php echo $result->per_id;?>"><?php echo $result->per_id;?></a></td>
+<td><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_read/?per_id=<?php echo $result->per_id;?>"><?php echo $result->per_id;?></a></td>
 <td><?php echo $result->per_code; ?></td>
 <?php foreach($groups as $group) { ?>
 <?php if($result->per_islocked == 1 && $group->grp_islocked == 1) { ?>

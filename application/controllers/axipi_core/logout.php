@@ -6,6 +6,10 @@ class logout extends CI_Controller {
 	}
 	public function index() {
 		$this->auth->logout();
-		redirect('axipi');
+		if($this->config->item('hst_rewrite')) {
+			redirect('axipi');
+		} else {
+			redirect('?ci=axipi');
+		}
 	}
 }

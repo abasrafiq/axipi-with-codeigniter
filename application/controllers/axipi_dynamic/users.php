@@ -22,7 +22,7 @@ class users extends CI_Controller {
 		$col = build_columns('users', $columns, 'usr.usr_id', 'DESC');
 
 		$results = $this->users_model->get_all_users($flt);
-		$build_pagination = $this->axipi_library->build_pagination(base_url().$this->itm->itm_code, 'users', $results->count, 30);
+		$build_pagination = $this->axipi_library->build_pagination(ci_url().$this->itm->itm_code, 'users', $results->count, 30);
 
 		$data = array();
 		$data['columns'] = $col;
@@ -124,9 +124,6 @@ class users extends CI_Controller {
 				if($this->form_validation->run() == FALSE) {
 					$this->zones['content'] = $this->load->view('axipi_dynamic/users/users_delete', $data, true);
 				} else {
-					$this->db->where('usr_id', $usr_id);
-					$this->db->delete('cnt_usr');
-
 					$this->db->where('usr_id', $usr_id);
 					$this->db->where('grp_usr_islocked', 0);
 					$this->db->delete('grp_usr');

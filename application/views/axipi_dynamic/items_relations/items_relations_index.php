@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('relations'); ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('relations'); ?></a></li>
 <li><?php echo $this->lang->line('index'); ?></li>
 </ul>
 </div>
@@ -11,7 +11,7 @@
 <h1><?php echo $this->lang->line('relations'); ?> (<?php echo $position; ?>)</h1>
 <div class="display">
 
-<?php echo form_open(base_url().$this->itm->itm_code); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 <div class="filters">
 <div><?php echo form_label($this->lang->line('itm_code'), 'items_relations_itm_code'); ?><?php echo form_input('items_relations_itm_code', set_value('items_relations_itm_code', $this->session->userdata('items_relations_itm_code')), 'id="items_relations_itm_code" class="inputtext"'); ?></div>
 <div><?php echo form_label($this->lang->line('itm_title'), 'items_relations_itm_title'); ?><?php echo form_input('items_relations_itm_title', set_value('items_relations_itm_title', $this->session->userdata('items_relations_itm_title')), 'id="items_relations_itm_title" class="inputtext"'); ?></div>
@@ -30,7 +30,7 @@
 <div class="box1">
 <h1><?php echo $result->itm_title; ?> (<?php echo $result->itm_code; ?>)</h1>
 <ul>
-<li><a class="create" href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_create/<?php echo $result->itm_id; ?>"><?php echo $this->lang->line('create'); ?></a></li>
+<li><a class="create" href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_create/<?php echo $result->itm_id; ?>"><?php echo $this->lang->line('create'); ?></a></li>
 </ul>
 <div class="display">
 
@@ -53,7 +53,7 @@
 
 <?php foreach($items_relations[$result->itm_id] as $itm_rel) { ?>
 <tr>
-<td><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $itm_rel->itm_title;?></a></td>
+<td><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $itm_rel->itm_title;?></a></td>
 <td><?php echo $itm_rel->sct_code; ?></td>
 <td><?php echo $itm_rel->cmp_code; ?></td>
 <td><?php echo $itm_rel->lng_code; ?></td>
@@ -61,8 +61,8 @@
 <td><?php echo $itm_rel->itm_rel_ordering; ?></td>
 <td><?php echo $this->lang->line('reply_'.$itm_rel->itm_rel_ispublished); ?></td>
 <th>
-<a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_update/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $this->lang->line('update'); ?></a>
-<a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $this->lang->line('delete'); ?></a>
+<a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_update/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $this->lang->line('update'); ?></a>
+<a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $result->itm_id;?>/<?php echo $itm_rel->itm_id;?>"><?php echo $this->lang->line('delete'); ?></a>
 </th>
 </tr>
 <?php } ?>

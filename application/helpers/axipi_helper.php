@@ -1,5 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+if( ! function_exists('ci_url')) {
+	function ci_url() {
+		$CI =& get_instance();
+		if($CI->config->item('hst_rewrite')) {
+			$url = $CI->base_url;
+		} else {
+			$url = $CI->base_url.'?ci=';
+		}
+		return $url;
+	}
+}
+
 if( ! function_exists('build_filters')) {
 	function build_filters($filters) {
 		$CI =& get_instance();
@@ -103,7 +115,12 @@ if( ! function_exists('display_column')) {
 				}
 			}
 		}
-		$link = '<th'.$class.'><a href="'.$url.'?'.$reference.'_col='.urlencode($column).'">'.$lang.'</a></th>';
+		if($CI->config->item('hst_rewrite')) {
+			$url = $url.'?';
+		} else {
+			$url = $url.'&';
+		}
+		$link = '<th'.$class.'><a href="'.$url.$reference.'_col='.urlencode($column).'">'.$lang.'</a></th>';
 		echo $link;
 	}
 }

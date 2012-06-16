@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('items'); ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('items'); ?></a></li>
 <li><?php echo $this->lang->line('index'); ?></li>
 </ul>
 </div>
@@ -13,7 +13,7 @@
 
 <h2><?php echo $this->lang->line('index'); ?></h2>
 
-<?php echo form_open(base_url().$this->itm->itm_code); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 <div class="filters">
 <div><?php echo form_label($this->lang->line('itm_code'), 'groups_items_itm_code'); ?><?php echo form_input('groups_items_itm_code', set_value('groups_items_itm_code', $this->session->userdata('groups_items_itm_code')), 'id="groups_items_itm_code" class="inputtext"'); ?></div>
 <div><?php echo form_label($this->lang->line('itm_title'), 'groups_items_itm_title'); ?><?php echo form_input('groups_items_itm_title', set_value('groups_items_itm_title', $this->session->userdata('groups_items_itm_title')), 'id="groups_items_itm_title" class="inputtext"'); ?></div>
@@ -31,15 +31,15 @@
 <?php echo $pagination; ?>
 </div>
 
-<?php echo form_open(base_url().$this->itm->itm_code); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 
 <table>
 <thead>
 <tr>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_items', $columns[0], $this->lang->line('itm_id')); ?>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_items', $columns[1], $this->lang->line('itm_code')); ?>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_items', $columns[2], $this->lang->line('itm_title')); ?>
-<?php display_column(base_url().$this->itm->itm_code, 'groups_items', $columns[3], $this->lang->line('cmp_code')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_items', $columns[0], $this->lang->line('itm_id')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_items', $columns[1], $this->lang->line('itm_code')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_items', $columns[2], $this->lang->line('itm_title')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'groups_items', $columns[3], $this->lang->line('cmp_code')); ?>
 <?php foreach($groups as $group) { ?>
 <th><?php echo $group->grp_trl_title; ?></th>
 <?php } ?>

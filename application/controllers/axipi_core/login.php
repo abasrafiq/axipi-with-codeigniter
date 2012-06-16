@@ -18,7 +18,11 @@ class login extends CI_Controller {
 			if($this->input->post('remember_checkbox')) {
 				//$this->input->set_cookie(array('name'=>'axipi-remember', 'value'=>1, 'expire'=>3600*24*30, 'path'=>'/', 'secure'=>TRUE));
 			}
-			redirect('axipi');
+			if($this->config->item('hst_rewrite')) {
+				redirect('axipi');
+			} else {
+				redirect('?ci=axipi');
+			}
 		}
 	}
 	public function rule_login() {

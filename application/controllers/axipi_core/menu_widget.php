@@ -39,7 +39,7 @@ class menu_widget {
 				if($value['itemlink'] != '' && substr($value['itemlink'], 0, 1) == '#') {
 					$link = $value['itemlink'];
 				} else {
-					$link = base_url().$value['item'];
+					$link = ci_url().$value['item'];
 				}
 				if(in_array($value['itm_id'], $selectedItems)) {
 					$classes[] = 'active';

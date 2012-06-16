@@ -307,7 +307,11 @@
 
 	$CFG->load('axipi_config');
 
-	$segs = $URI->segment_array();
+	if($IN->get('ci')) {
+		$segs = explode('/', $IN->get('ci'));
+	} else {
+		$segs = $URI->segment_array();
+	}
 	$segments_page = array();
 	$arguments = array();
 

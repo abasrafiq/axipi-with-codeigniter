@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('sections'); ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('sections'); ?></a></li>
 <li><?php echo $sct->sct_code; ?></li>
 <li><?php echo $this->lang->line('read'); ?></li>
 </ul>
@@ -11,9 +11,9 @@
 <div class="box1">
 <h1><?php echo $sct->sct_code; ?></h1>
 <ul>
-<?php if($sct->sct_islocked == 0) { ?><li><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $sct->sct_id; ?>"><?php echo $this->lang->line('delete'); ?></a></li><?php } ?>
-<li><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_update/<?php echo $sct->sct_id; ?>"><?php echo $this->lang->line('update'); ?></a></li>
-<li><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('index'); ?></a></li>
+<?php if($sct->sct_islocked == 0) { ?><li><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $sct->sct_id; ?>"><?php echo $this->lang->line('delete'); ?></a></li><?php } ?>
+<li><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_update/<?php echo $sct->sct_id; ?>"><?php echo $this->lang->line('update'); ?></a></li>
+<li><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('index'); ?></a></li>
 </ul>
 <div class="display">
 

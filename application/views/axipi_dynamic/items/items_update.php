@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('items'); ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('items'); ?></a></li>
 <li><?php echo $this->lang->line('update'); ?></li>
 </ul>
 </div>
@@ -10,8 +10,8 @@
 <div class="box1">
 <h1><?php echo $itm->itm_code; ?></h1>
 <ul>
-<li><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $itm->itm_id; ?>"><?php echo $this->lang->line('read'); ?></a></li>
-<li><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('index'); ?></a></li>
+<li><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $itm->itm_id; ?>"><?php echo $this->lang->line('read'); ?></a></li>
+<li><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->lang->line('index'); ?></a></li>
 </ul>
 <div class="display">
 
@@ -19,12 +19,12 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open_multipart(current_url()); ?>
+<?php echo form_open_multipart(ci_url().$this->itm->itm_code.'/_update/'.$itm->itm_id); ?>
 
 <div class="column1">
 <p><?php echo form_label($this->lang->line('sct_code').' *', 'sct_id'); ?><?php echo form_dropdown('sct_id', $select_section, set_value('sct_id', $itm->sct_id), 'id="sct_id" class="select"'); ?></p>
 <p><?php echo form_label($this->lang->line('itm_parent'), 'itm_parent'); ?><?php echo form_dropdown('itm_parent', $select_item_parent, set_value('itm_parent', $itm->itm_parent), 'id="itm_parent" class="select"'); ?></p>
-<p><?php echo form_label($this->lang->line('itm_code'), 'itm_code'); ?><?php echo form_input('itm_code', set_value('itm_code', $itm->itm_code), 'id="itm_code" class="inputtext"'); ?></p>
+<p><?php echo form_label($this->lang->line('itm_code').' *', 'itm_code'); ?><?php echo form_input('itm_code', set_value('itm_code', $itm->itm_code), 'id="itm_code" class="inputtext"'); ?></p>
 <p><?php echo form_label($this->lang->line('itm_virtualcode'), 'itm_virtualcode'); ?><?php echo form_input('itm_virtualcode', set_value('itm_virtualcode', $itm->itm_virtualcode), 'id="itm_virtualcode" class="inputtext"'); ?></p>
 <p><?php echo form_label($this->lang->line('itm_title').' *', 'itm_title'); ?><?php echo form_input('itm_title', set_value('itm_title', $itm->itm_title), 'id="itm_title" class="inputtext"'); ?></p>
 <p><?php echo form_label($this->lang->line('cmp_code').' *', 'cmp_id'); ?><?php echo form_dropdown('cmp_id', $select_component, set_value('cmp_id', $itm->cmp_id), 'id="cmp_id" class="select"'); ?></p>
@@ -40,7 +40,7 @@
 	<p><?php echo form_label($this->lang->line($file), $file); ?><?php echo form_upload($file, false, 'id="'.$file.'" class="inputfile"'); ?></p>
 	<?php if($itm->{$file} && file_exists('storage/'.$this->storage_folder.'/'.$file.'/'.$itm->{$file})) { ?>
 		<p><?php echo form_label($this->lang->line('delete'), 'delete_'.$file); ?><?php echo form_checkbox('delete_'.$file, 1, set_value('delete_'.$file), 'id="delete_'.$file.'" class="inputcheckbox"'); ?></p>
-		<p><a href="<?php echo base_url(); ?>storage/<?php echo $this->storage_folder; ?>/<?php echo $file; ?>/<?php echo $itm->{$file}; ?>"><?php echo $itm->{$file}; ?></a></p>
+		<p><a href="<?php echo ci_url(); ?>storage/<?php echo $this->storage_folder; ?>/<?php echo $file; ?>/<?php echo $itm->{$file}; ?>"><?php echo $itm->{$file}; ?></a></p>
 	<?php } ?>
 <?php } ?>
 <p><?php echo form_label($this->lang->line('itm_description'), 'itm_description'); ?><?php echo form_textarea('itm_description', set_value('itm_description', $itm->itm_description), 'id="itm_description" class="textarea"'); ?></p>

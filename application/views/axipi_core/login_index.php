@@ -1,7 +1,7 @@
 <div class="box-breadcrumbs box1">
 <div class="display">
 <ul>
-<li class="first"><a href="<?php echo base_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->itm->itm_title; ?></a></li>
+<li class="first"><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>"><?php echo $this->itm->itm_title; ?></a></li>
 </ul>
 </div>
 </div>
@@ -12,7 +12,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open(current_url()); ?>
+<?php echo form_open(ci_url().$this->itm->itm_code); ?>
 
 <div class="column1">
 <p><?php echo form_label($this->lang->line('email').' *', 'email'); ?><?php echo form_input('email', set_value('email'), 'id="email" class="inputtext"'); ?></p>
