@@ -30,12 +30,5 @@
 <p><span class="label"><?php echo $this->lang->line('hst_debug'); ?></span><?php echo $this->lang->line('reply_'.$hst->hst_debug); ?></p>
 </div>
 
-<?php if($translations) { ?>
-	<?php foreach($translations as $trl) { ?>
-		<h2><?php echo $trl->lng_title; ?> (<?php echo $trl->lng_code; ?>)</h2>
-		<p><span class="label"><?php echo $this->lang->line('hst_trl_defaultitem'); ?></span><?php echo $trl->hst_trl_defaultitem; ?></p>
-	<?php } ?>
-<?php } ?>
-
 </div>
 </div>

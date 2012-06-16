@@ -125,11 +125,6 @@ INSERT INTO `grp_usr` (`grp_id`, `usr_id`, `grp_usr_createdby`, `grp_usr_datecre
 
 
 --
--- Dumping data for table `hst_trl`
---
-
-
---
 -- Dumping data for table `itm`
 --
 

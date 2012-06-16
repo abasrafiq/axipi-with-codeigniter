@@ -118,6 +118,7 @@ class items extends CI_Controller {
 			$this->db->set('itm_datecreated', date('Y-m-d H:i:s'));
 			$this->db->set('itm_ispublished', checkbox2database($this->input->post('itm_ispublished')));
 			$this->db->insert('itm');
+			$this->msg[] = $this->lang->line('created');
 			$this->index();
 		}
 	}

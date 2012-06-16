@@ -183,25 +183,6 @@ CREATE TABLE IF NOT EXISTS `hst` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hst_trl`
---
-
-CREATE TABLE IF NOT EXISTS `hst_trl` (
-  `hst_id` int(10) unsigned NOT NULL,
-  `lng_id` int(10) unsigned NOT NULL,
-  `hst_trl_defaultitem` int(10) unsigned NOT NULL,
-  `hst_trl_createdby` int(10) unsigned DEFAULT NULL,
-  `hst_trl_datecreated` datetime DEFAULT NULL,
-  `hst_trl_modifiedby` int(10) unsigned DEFAULT NULL,
-  `hst_trl_datemodified` datetime DEFAULT NULL,
-  PRIMARY KEY (`hst_id`,`lng_id`),
-  KEY `hst_id` (`hst_id`),
-  KEY `lng_id` (`lng_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='hosts_translations';
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `itm`
 --
 

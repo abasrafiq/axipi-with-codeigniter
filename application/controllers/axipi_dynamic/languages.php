@@ -123,9 +123,6 @@ class languages extends CI_Controller {
 					$this->db->delete('grp_trl');
 	
 					$this->db->where('lng_id', $lng_id);
-					$this->db->delete('hst_trl');
-	
-					$this->db->where('lng_id', $lng_id);
 					$this->db->delete('per_trl');
 	
 					$this->db->where('lng_id', $lng_id);
