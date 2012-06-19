@@ -238,9 +238,6 @@ class items extends CI_Controller {
 					$this->db->delete('itm_rel');
 
 					$this->db->where('itm_id', $itm_id);
-					$this->db->delete('itm_stg');
-
-					$this->db->where('itm_id', $itm_id);
 					$this->db->delete('itm_zon');
 
 					$this->db->where('itm_id', $itm_id);

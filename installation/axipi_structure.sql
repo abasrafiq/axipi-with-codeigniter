@@ -31,27 +31,6 @@ CREATE TABLE IF NOT EXISTS `cmp` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cmp_stg`
---
-
-CREATE TABLE IF NOT EXISTS `cmp_stg` (
-  `cmp_id` int(10) unsigned NOT NULL,
-  `stg_id` int(10) unsigned NOT NULL,
-  `cmp_stg_value` varchar(255) DEFAULT NULL,
-  `cmp_stg_createdby` int(10) unsigned DEFAULT NULL,
-  `cmp_stg_datecreated` datetime DEFAULT NULL,
-  `cmp_stg_modifiedby` int(10) unsigned DEFAULT NULL,
-  `cmp_stg_datemodified` datetime DEFAULT NULL,
-  `cmp_stg_ispublished` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`cmp_id`,`stg_id`),
-  KEY `cmp_stg_ispublished` (`cmp_stg_ispublished`),
-  KEY `cmp_id` (`cmp_id`),
-  KEY `stg_id` (`stg_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='components_settings';
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `grp`
 --
 
@@ -260,27 +239,6 @@ CREATE TABLE IF NOT EXISTS `itm_rel` (
   KEY `itm_rel_ispublished` (`itm_rel_ispublished`),
   KEY `itm_rel_parent` (`itm_rel_parent`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='items_relations';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `itm_stg`
---
-
-CREATE TABLE IF NOT EXISTS `itm_stg` (
-  `itm_id` int(10) unsigned NOT NULL,
-  `stg_id` int(10) unsigned NOT NULL,
-  `itm_stg_value` varchar(255) DEFAULT NULL,
-  `itm_stg_createdby` int(10) unsigned DEFAULT NULL,
-  `itm_stg_datecreated` datetime DEFAULT NULL,
-  `itm_stg_modifiedby` int(10) unsigned DEFAULT NULL,
-  `itm_stg_datemodified` datetime DEFAULT NULL,
-  `itm_stg_ispublished` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`itm_id`,`stg_id`),
-  KEY `itm_id` (`itm_id`),
-  KEY `stg_id` (`stg_id`),
-  KEY `itm_stg_ispublished` (`itm_stg_ispublished`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='items_settings';
 
 -- --------------------------------------------------------
 

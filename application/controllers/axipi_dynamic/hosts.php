@@ -73,6 +73,10 @@ class hosts extends CI_Controller {
 			$this->db->insert('hst');
 			$this->msg[] = $this->lang->line('created');
 			$this->index();
+			if($this->input->post('hst_code') == $_SERVER['HTTP_HOST']) {
+				$this->hst->hst_debug = checkbox2database($this->input->post('hst_debug'));
+				$this->hst->lay_id = $this->input->post('lay_id');
+			}
 		}
 	}
 	public function read($hst_id) {
@@ -112,6 +116,10 @@ class hosts extends CI_Controller {
 				$this->db->update('hst');
 				$this->msg[] = $this->lang->line('updated');
 				$this->index();
+				if($this->input->post('hst_code') == $_SERVER['HTTP_HOST']) {
+					$this->hst->hst_debug = checkbox2database($this->input->post('hst_debug'));
+					$this->hst->lay_id = $this->input->post('lay_id');
+				}
 			}
 		} else {
 			$this->index();

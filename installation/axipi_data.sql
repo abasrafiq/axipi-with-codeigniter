@@ -39,10 +39,6 @@ INSERT INTO `cmp` (`cmp_id`, `lay_id`, `cmp_code`, `cmp_ispage`, `cmp_isexcludep
 (1131, NULL, 'axipi_dynamic/watchdog', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1132, NULL, 'axipi_dynamic/connections_users', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
 
---
--- Dumping data for table `cmp_stg`
---
-
 
 --
 -- Dumping data for table `grp`
@@ -76,24 +72,14 @@ INSERT INTO `grp_itm` (`grp_id`, `itm_id`, `grp_itm_createdby`, `grp_itm_datecre
 (1000, 1028, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1029, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1030, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1033, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1031, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1032, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1035, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1038, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1050, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1065, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1066, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1067, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1070, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1071, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1072, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1077, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1078, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1080, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1081, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1082, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1084, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1000, 1081, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
 
 --
 -- Dumping data for table `grp_per`
@@ -154,8 +140,6 @@ INSERT INTO `itm` (`itm_id`, `cmp_id`, `lay_id`, `lng_id`, `sct_id`, `itm_code`,
 (1028, 1002, NULL, 1000, 1000, 'axipi/core/menu', NULL, 1070, 'axipi core', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1029, 1027, NULL, 1000, 1000, 'axipi/core/debug', NULL, 1070, 'Debug', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1030, 1028, NULL, 1000, 1000, 'axipi/core/database', NULL, 1070, 'Database', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1033, 1031, NULL, 1000, 1000, 'axipi/dynamic/items/settings', NULL, 1008, 'Settings', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1035, 1033, NULL, 1000, 1000, 'axipi/dynamic/components/settings', NULL, 1002, 'Settings', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1038, 1035, NULL, 1000, 1000, 'axipi/dynamic/layouts', NULL, 1065, 'Layouts', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1050, 1041, NULL, 1000, 1000, 'axipi/core/folders', NULL, 1070, 'Folders', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1065, 1000, NULL, 1000, 1000, 'axipi/dynamic', NULL, NULL, 'axipi dynamic', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
@@ -192,8 +176,6 @@ INSERT INTO `itm_rel` (`itm_id`, `rel_id`, `itm_rel_parent`, `itm_rel_title`, `i
 (1029, 1028, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1030, 1028, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1027, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
-(1033, 1009, 1008, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
-(1035, 1009, 1002, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1038, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1050, 1028, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1065, 1005, NULL, NULL, 10, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
@@ -205,10 +187,6 @@ INSERT INTO `itm_rel` (`itm_id`, `rel_id`, `itm_rel_parent`, `itm_rel_title`, `i
 (1002, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1080, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1081, 1009, 1015, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1);
-
---
--- Dumping data for table `itm_stg`
---
 
 
 --
