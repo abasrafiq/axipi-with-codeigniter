@@ -2,7 +2,7 @@
 
 $config['403_cmp_code'] = 'axipi_core/error403';
 $config['404_cmp_code'] = 'axipi_core/error404';
-$config['date_timezone'] = 'Etc/UCT';
+$config['date_timezone'] = 'UTC';
 $config['default_itm_code'] = 'axipi';
 $config['default_usr_timezone'] = 1;
 $config['hst_rewrite'] = TRUE;
