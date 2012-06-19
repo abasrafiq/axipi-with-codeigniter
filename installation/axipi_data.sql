@@ -193,7 +193,6 @@ INSERT INTO `itm_rel` (`itm_id`, `rel_id`, `itm_rel_parent`, `itm_rel_title`, `i
 
 INSERT INTO `itm_zon` (`itm_id`, `zon_id`, `itm_zon_ordering`, `itm_zon_createdby`, `itm_zon_datecreated`, `itm_zon_modifiedby`, `itm_zon_datemodified`, `itm_zon_ispublished`) VALUES
 (1005, 1001, -10, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
-(1007, 1001, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1009, 1000, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1011, 1002, -100, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1012, 1002, -50, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
