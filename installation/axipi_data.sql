@@ -28,8 +28,6 @@ INSERT INTO `cmp` (`cmp_id`, `lay_id`, `cmp_code`, `cmp_ispage`, `cmp_isexcludep
 (1026, NULL, 'axipi_dynamic/hosts', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1027, NULL, 'axipi_core/debug', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1028, NULL, 'axipi_core/database', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1031, NULL, 'axipi_dynamic/items_settings', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1033, NULL, 'axipi_dynamic/components_settings', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1035, NULL, 'axipi_dynamic/layouts', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1041, NULL, 'axipi_core/folders', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1050, NULL, 'axipi_core/profile', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
