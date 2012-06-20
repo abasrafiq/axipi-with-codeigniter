@@ -18,7 +18,7 @@ class layouts extends CI_Controller {
 		$columns[] = 'lay.lay_id';
 		$columns[] = 'lay.lay_code';
 		$columns[] = 'lay.lay_type';
-		$columns[] = 'count_sections';
+		$columns[] = 'count_zones';
 		$col = build_columns('layouts', $columns, 'lay.lay_id', 'DESC');
 
 		$results = $this->layouts_model->get_all_layouts($flt);

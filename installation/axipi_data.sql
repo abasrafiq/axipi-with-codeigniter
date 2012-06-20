@@ -34,8 +34,7 @@ INSERT INTO `cmp` (`cmp_id`, `lay_id`, `cmp_code`, `cmp_ispage`, `cmp_isexcludep
 (1078, NULL, 'axipi_core/medias', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1084, NULL, 'axipi_core/lostpassword', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1085, NULL, 'axipi_core/goodies', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1131, NULL, 'axipi_dynamic/watchdog', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1132, NULL, 'axipi_dynamic/connections_users', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1131, NULL, 'axipi_dynamic/watchdog', 1, 0, 0, 0, 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
 
 
 --
@@ -76,8 +75,7 @@ INSERT INTO `grp_itm` (`grp_id`, `itm_id`, `grp_itm_createdby`, `grp_itm_datecre
 (1000, 1070, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1071, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1000, 1072, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1080, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1000, 1081, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1000, 1080, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
 
 --
 -- Dumping data for table `grp_per`
@@ -91,10 +89,7 @@ INSERT INTO `grp_itm` (`grp_id`, `itm_id`, `grp_itm_createdby`, `grp_itm_datecre
 INSERT INTO `grp_trl` (`grp_id`, `lng_id`, `grp_trl_title`, `grp_trl_createdby`, `grp_trl_datecreated`, `grp_trl_modifiedby`, `grp_trl_datemodified`) VALUES
 (1000, 1000, 'axipi', NULL, '2012-01-01 00:00:00', NULL, NULL),
 (1001, 1000, 'Guest', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1002, 1000, 'Connected', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1002, 1001, 'Connecté', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1000, 1001, 'axipi', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1001, 1001, 'Invité', NULL, '2012-01-01 00:00:00', NULL, NULL);
+(1002, 1000, 'Connected', NULL, '2012-01-01 00:00:00', NULL, NULL);
 
 --
 -- Dumping data for table `grp_usr`
@@ -148,8 +143,7 @@ INSERT INTO `itm` (`itm_id`, `cmp_id`, `lay_id`, `lng_id`, `sct_id`, `itm_code`,
 (1073, 1020, NULL, 1000, 1000, 'error404', NULL, NULL, 'Error 404', NULL, 0, NULL, NULL, NULL, NULL, 1, 'all', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1074, 1019, NULL, 1000, 1000, 'error403', NULL, NULL, 'Error 403', NULL, 0, NULL, NULL, NULL, NULL, 1, 'all', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
 (1076, 1084, NULL, 1000, 1000, 'axipi/lostpassword', NULL, NULL, 'Forgot password', NULL, 0, NULL, NULL, NULL, NULL, 1, 'guest', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1080, 1131, NULL, 1000, 1000, 'axipi/dynamic/watchdog', NULL, 1065, 'Watchdog', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1081, 1132, NULL, 1000, 1000, 'axipi/dynamic/users/connections', NULL, 1015, 'Connections', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1080, 1131, NULL, 1000, 1000, 'axipi/dynamic/watchdog', NULL, 1065, 'Watchdog', NULL, 0, NULL, NULL, NULL, NULL, 1, 'groups', 0, '2012-01-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
 
 --
 -- Dumping data for table `itm_rel`
@@ -183,9 +177,7 @@ INSERT INTO `itm_rel` (`itm_id`, `rel_id`, `itm_rel_parent`, `itm_rel_title`, `i
 (1072, 1028, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1076, 1005, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
 (1002, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
-(1080, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1),
-(1081, 1009, 1015, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1);
-
+(1080, 1009, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1);
 
 --
 -- Dumping data for table `itm_zon`
@@ -204,16 +196,14 @@ INSERT INTO `itm_zon` (`itm_id`, `zon_id`, `itm_zon_ordering`, `itm_zon_createdb
 --
 
 INSERT INTO `lay` (`lay_id`, `lay_code`, `lay_type`, `lay_createdby`, `lay_datecreated`, `lay_modifiedby`, `lay_datemodified`, `lay_ispublished`, `lay_islocked`) VALUES
-(1000, 'axipi', 'text/html', NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
-(1001, 'site', 'text/html', NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1000, 'axipi', 'text/html', NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1);
 
 --
 -- Dumping data for table `lng`
 --
 
 INSERT INTO `lng` (`lng_id`, `lay_id`, `lng_code`, `lng_title`, `lng_defaultitem`, `lng_createdby`, `lng_datecreated`, `lng_modifiedby`, `lng_datemodified`, `lng_ispublished`, `lng_islocked`) VALUES
-(1000, NULL, 'en', 'English', 1000, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
-(1001, NULL, 'fr', 'Français', 0, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1000, NULL, 'en', 'English', 1000, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1);
 
 --
 -- Dumping data for table `per`
@@ -230,17 +220,14 @@ INSERT INTO `lng` (`lng_id`, `lay_id`, `lng_code`, `lng_title`, `lng_defaultitem
 --
 
 INSERT INTO `sct` (`sct_id`, `lay_id`, `sct_code`, `sct_virtualcode`, `sct_createdby`, `sct_datecreated`, `sct_modifiedby`, `sct_datemodified`, `sct_ispublished`, `sct_islocked`) VALUES
-(1000, 1000, 'axipi', NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
-(1001, 1001, 'site', NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1000, 1000, 'axipi', NULL, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1);
 
 --
 -- Dumping data for table `sct_trl`
 --
 
 INSERT INTO `sct_trl` (`lng_id`, `sct_id`, `sct_trl_title`, `sct_trl_description`, `sct_trl_keywords`, `sct_trl_createdby`, `sct_trl_datecreated`, `sct_trl_modifiedby`, `sct_trl_datemodified`) VALUES
-(1000, 1000, 'axipi', NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1000, 1001, 'Site', '', '', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1001, 1000, 'axipi', NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL);
+(1000, 1000, 'axipi', NULL, NULL, NULL, '2012-01-01 00:00:00', NULL, NULL);
 
 --
 -- Dumping data for table `trl_zon`
@@ -258,9 +245,7 @@ INSERT INTO `trl_zon` (`zon_id`, `lng_id`, `trl_zon_title`, `trl_zon_createdby`,
 (1010, 1000, 'Page sidebar', NULL, '2012-01-01 00:00:00', NULL, NULL),
 (1011, 1000, 'Content footer', NULL, '2012-01-01 00:00:00', NULL, NULL),
 (1012, 1000, 'Content header', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1013, 1000, 'Content sidebar', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1001, 1001, 'Entête page', NULL, '2012-01-01 00:00:00', NULL, NULL),
-(1000, 1001, 'Page sidebar', NULL, '2012-01-01 00:00:00', NULL, NULL);
+(1013, 1000, 'Content sidebar', NULL, '2012-01-01 00:00:00', NULL, NULL);
 
 --
 -- Dumping data for table `usr`
@@ -284,10 +269,4 @@ INSERT INTO `zon` (`zon_id`, `lay_id`, `zon_code`, `zon_ordering`, `zon_createdb
 (1002, 1000, 'contentheader', 4, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
 (1003, 1000, 'contentfooter', 6, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
 (1006, 1000, 'pagefooter', 3, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
-(1007, 1000, 'contentsidebar', 5, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1),
-(1008, 1001, 'pageheader', 1, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1009, 1001, 'pagefooter', 3, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1010, 1001, 'pagesidebar', 2, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1011, 1001, 'contentfooter', 6, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1012, 1001, 'contentheader', 4, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0),
-(1013, 1001, 'contentsidebar', 5, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 0);
+(1007, 1000, 'contentsidebar', 5, NULL, '2012-01-01 00:00:00', NULL, NULL, 1, 1);

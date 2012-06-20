@@ -332,11 +332,12 @@
 		$page = $CFG->item('default_itm_code');
 	}
 
-	$query = $db->query('SELECT itm.*, cmp.cmp_code FROM '.$db->dbprefix('itm').' AS itm LEFT JOIN '.$db->dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id WHERE itm_code = ?', array($page));
+	$query = $db->query('SELECT itm.*, cmp.cmp_code, lng.lng_code FROM '.$db->dbprefix('itm').' AS itm LEFT JOIN '.$db->dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id LEFT JOIN '.$db->dbprefix('lng').' AS lng ON lng.lng_id = itm.lng_id WHERE itm_code = ?', array($page));
 	if($query->num_rows() == 0) {
-		$query = $db->query('SELECT *, cmp.cmp_code FROM '.$db->dbprefix('itm').' AS itm LEFT JOIN '.$db->dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id WHERE cmp_code = ?', array($CFG->item('404_cmp_code')));
+		$query = $db->query('SELECT *, cmp.cmp_code, lng.lng_code FROM '.$db->dbprefix('itm').' AS itm LEFT JOIN '.$db->dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id LEFT JOIN '.$db->dbprefix('lng').' AS lng ON lng.lng_id = itm.lng_id WHERE cmp_code = ?', array($CFG->item('404_cmp_code')));
 	}
 	$itm = $query->row();
+	$CFG->set_item('language', $itm->lng_code);
 
 	list($directory, $class) = explode('/', $itm->cmp_code);
 	if(file_exists(APPPATH.'controllers/'.$itm->cmp_code.EXT)) {

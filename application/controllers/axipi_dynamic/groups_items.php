@@ -26,7 +26,7 @@ class groups_items extends CI_Controller {
 		$columns[] = 'itm.itm_code';
 		$columns[] = 'itm.itm_title';
 		$columns[] = 'cmp.cmp_code';
-		$col = build_columns('groups_items', $columns, 'itm.itm_id', 'DESC');
+		$col = build_columns('groups_items', $columns, 'itm.itm_code', 'ASC');
 
 		$results = $this->items_model->get_all_items($flt);
 		$build_pagination = $this->axipi_library->build_pagination(ci_url().$this->itm->itm_code, 'groups_items', $results->count, 30);

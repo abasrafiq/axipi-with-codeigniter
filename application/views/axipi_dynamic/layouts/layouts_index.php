@@ -35,7 +35,7 @@
 <?php display_column(ci_url().$this->itm->itm_code, 'layouts', $columns[0], $this->lang->line('lay_id')); ?>
 <?php display_column(ci_url().$this->itm->itm_code, 'layouts', $columns[1], $this->lang->line('lay_code')); ?>
 <?php display_column(ci_url().$this->itm->itm_code, 'layouts', $columns[2], $this->lang->line('lay_type')); ?>
-<?php display_column(ci_url().$this->itm->itm_code, 'layouts', $columns[3], $this->lang->line('sections')); ?>
+<?php display_column(ci_url().$this->itm->itm_code, 'layouts', $columns[3], $this->lang->line('zones')); ?>
 <th>&nbsp;</th>
 </tr>
 </thead>
@@ -46,10 +46,10 @@
 <td><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_read/<?php echo $result->lay_id;?>"><?php echo $result->lay_id;?></a></td>
 <td><?php echo $result->lay_code; ?></td>
 <td><?php echo $result->lay_type; ?></td>
-<td><?php echo $result->count_sections; ?></td>
+<td><?php echo $result->count_zones; ?></td>
 <th>
 <a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_update/<?php echo $result->lay_id;?>"><?php echo $this->lang->line('update'); ?></a>
-<?php if($result->count_sections == 0 && $result->lay_islocked == 0) { ?><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $result->lay_id;?>"><?php echo $this->lang->line('delete'); ?></a><?php } ?>
+<?php if($result->lay_islocked == 0) { ?><a href="<?php echo ci_url(); ?><?php echo $this->itm->itm_code; ?>/_delete/<?php echo $result->lay_id;?>"><?php echo $this->lang->line('delete'); ?></a><?php } ?>
 </th>
 </tr>
 <?php } ?>

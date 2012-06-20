@@ -23,7 +23,7 @@ class components extends CI_Controller {
 		$columns[] = 'cmp.cmp_iselement';
 		$columns[] = 'cmp.cmp_isrelation';
 		$columns[] = 'count_items';
-		$col = build_columns('components', $columns, 'cmp.cmp_id', 'DESC');
+		$col = build_columns('components', $columns, 'cmp.cmp_code', 'ASC');
 
 		$results = $this->components_model->get_all_components($flt);
 		$build_pagination = $this->axipi_library->build_pagination(ci_url().$this->itm->itm_code, 'components', $results->count, 50);

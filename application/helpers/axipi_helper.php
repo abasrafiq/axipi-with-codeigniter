@@ -78,8 +78,9 @@ if( ! function_exists('build_columns')) {
 		} elseif($CI->session->userdata($reference.'_col') && preg_match('/^[a-zA-Z0-9._]{1,}[ ](ASC|DESC)$/', $CI->session->userdata($reference.'_col'))) {
 			list($defined_order, $defined_direction) = explode(' ', $CI->session->userdata($reference.'_col'));
 		}
-		if(!in_array($defined_order, $columns)) {
-			$defined_order = '';
+		if(!in_array($defined_order, $columns) || !in_array($defined_direction, array('ASC', 'DESC'))) {
+			$defined_order = $default_order;
+			$defined_direction = $default_direction;
 			$CI->session->set_userdata($reference.'_col', $default_order.' '.$default_direction);
 		}
 		$col = array();
