@@ -155,26 +155,6 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 &gt; 					$this-&gt;ar_set[$this-&gt;_protect_identifiers($k, FALSE, TRUE)] = $this-&gt;escape($v);
 &gt; 				}</pre>
 
-<h3>/system/libraries/Driver.php</h3>
-
-<p>To solve "Accessing static property Auth::$lib_name as non static"</p>
-<pre>33c33
-&lt; 	protected static $lib_name;
----
-&gt; 	protected $lib_name;</pre>
-
-<h3>/system/libraries/Upload.php</h3>
-
-<p>To solve "Undefined index: tmp_path"</p>
-<pre>1055c1055
-&lt; 		if (DIRECTORY_SEPARATOR !== '\\' && function_exists('exec'))
----
-&gt; 		/*if (DIRECTORY_SEPARATOR !== '\\' && function_exists('exec'))
-1064c1064
-&lt; 		}
----
-&gt; 		}*/</pre>
-
 </div>
 
 </body>
