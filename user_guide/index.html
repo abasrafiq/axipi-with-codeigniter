@@ -75,19 +75,23 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 <h3>/system/core/CodeIgniter.php</h3>
 
 <p>To assume routes from database</p>
-<pre>304a305,353
+<pre>304a305,358
 &gt; 	$LOAD =& load_class('Loader', 'core');
 &gt; 	$db = $LOAD-&gt;database('', true);
 &gt; 
 &gt; 	$CFG-&gt;load('axipi_config');
 &gt; 
-&gt; 	$segs = $URI-&gt;segment_array();
+&gt; 	if($IN-&gt;get('ci')) {
+&gt; 		$segs = explode('/', $IN-&gt;get('ci'));
+&gt; 	} else {
+&gt; 		$segs = $URI-&gt;segment_array();
+&gt; 	}
 &gt; 	$segments_page = array();
 &gt; 	$arguments = array();
 &gt; 
 &gt; 	$stop = 0;
 &gt; 	foreach ($segs as $segment) {
-&gt; 		if(substr($segment, 0, 1) == '_' && $stop == 0) {
+&gt; 		if(substr($segment, 0, 1) == '_' &amp;&amp; $stop == 0) {
 &gt; 			$method = substr($segment, 1);
 &gt; 			$stop = 1;
 &gt; 		} else if($stop == 0) {
@@ -102,11 +106,12 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 &gt; 		$page = $CFG-&gt;item('default_itm_code');
 &gt; 	}
 &gt; 
-&gt; 	$query = $db-&gt;query('SELECT itm.*, cmp.cmp_code FROM '.$db-&gt;dbprefix('itm').' AS itm LEFT JOIN '.$db-&gt;dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id WHERE itm_code = ?', array($page));
+&gt; 	$query = $db-&gt;query('SELECT itm.*, cmp.cmp_code, lng.lng_code FROM '.$db-&gt;dbprefix('itm').' AS itm LEFT JOIN '.$db-&gt;dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id LEFT JOIN '.$db-&gt;dbprefix('lng').' AS lng ON lng.lng_id = itm.lng_id WHERE itm_code = ?', array($page));
 &gt; 	if($query-&gt;num_rows() == 0) {
-&gt; 		$query = $db-&gt;query('SELECT *, cmp.cmp_code FROM '.$db-&gt;dbprefix('itm').' AS itm LEFT JOIN '.$db-&gt;dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id WHERE cmp_code = ?', array($CFG-&gt;item('404_cmp_code')));
+&gt; 		$query = $db-&gt;query('SELECT *, cmp.cmp_code, lng.lng_code FROM '.$db-&gt;dbprefix('itm').' AS itm LEFT JOIN '.$db-&gt;dbprefix('cmp').' AS cmp ON cmp.cmp_id = itm.cmp_id LEFT JOIN '.$db-&gt;dbprefix('lng').' AS lng ON lng.lng_id = itm.lng_id WHERE cmp_code = ?', array($CFG-&gt;item('404_cmp_code')));
 &gt; 	}
 &gt; 	$itm = $query-&gt;row();
+&gt; 	$CFG-&gt;set_item('language', $itm-&gt;lng_code);
 &gt; 
 &gt; 	list($directory, $class) = explode('/', $itm-&gt;cmp_code);
 &gt; 	if(file_exists(APPPATH.'controllers/'.$itm-&gt;cmp_code.EXT)) {
@@ -114,7 +119,7 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 &gt; 		$RTR-&gt;set_directory($directory);
 &gt; 		$RTR-&gt;set_class($class);
 &gt; 
-&gt; 		if($method && method_exists($class, $method) && strncmp($method, '_', 1) != 0) {
+&gt; 		if($method &amp;&amp; method_exists($class, $method) &amp;&amp; strncmp($method, '_', 1) != 0) {
 &gt; 		} else {
 &gt; 			$method = 'index';
 &gt; 		}
@@ -125,10 +130,10 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 &gt; 		$method = 'index';
 &gt; 	}
 &gt; 
-308a358,359
+308a363,364
 &gt; 	$CI-&gt;db = $db;
 &gt; 	$CI-&gt;itm = $itm;
-359c410
+359c415
 &lt; 		call_user_func_array(array(&amp;$CI, $method), array_slice($URI-&gt;rsegments, 2));
 ---
 &gt; 		call_user_func_array(array(&amp;$CI, $method), $arguments);</pre>
@@ -146,7 +151,7 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 <h3>/system/database/DB_active_rec.php</h3>
 
 <p>To manage NULL values</p>
-<pre>924c924,928
+<pre>928c928,932
 &lt; 				$this-&gt;ar_set[$this-&gt;_protect_identifiers($k, FALSE, TRUE)] = $this-&gt;escape($v);
 ---
 &gt; 				if($v == '') {
@@ -154,6 +159,13 @@ Open the <strong>/application/config/database.php</strong> file with a text edit
 &gt; 				} else {
 &gt; 					$this-&gt;ar_set[$this-&gt;_protect_identifiers($k, FALSE, TRUE)] = $this-&gt;escape($v);
 &gt; 				}</pre>
+
+<h3>/system/helpers/file_helper.php</h3>
+<p>To keep index.html and .htaccess when cache is flushed</p>
+<pre>133c133
+&lt; 			if ($filename != "." and $filename != "..")
+---
+&gt; 			if ($filename != "." and $filename != ".." and $filename != "index.html" and $filename != ".htaccess")</pre>
 
 </div>
 
