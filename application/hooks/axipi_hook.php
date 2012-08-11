@@ -120,6 +120,6 @@ class axipi_hook {
 			}
 		} 
 		$this->CI->output->set_content_type($this->CI->lay->lay_type);
-		$page = $this->CI->load->view($this->CI->lay->lay_code, $output, 'true');
+		$this->CI->load->view($this->CI->lay->lay_code, $output, false);
 	}
 }
